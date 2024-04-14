@@ -13,5 +13,10 @@ public class SILab1Main {
         for (int i = 0; i < n; i++) {
             list.add(sc.next());
         }
+        List<String> oddLengthStrings = SILab1_1.filterOddLengthStrings(list);
+        System.out.println("Odd length strings:");
+        for (String str : oddLengthStrings) {
+            System.out.println(str);
+        }
     }
 }
