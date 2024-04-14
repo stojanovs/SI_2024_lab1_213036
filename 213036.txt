@@ -1,0 +1,224 @@
+stefa@Stefan MINGW64 ~/Documents (master)
+$ mkdir SI_2024_lab1_213036
+//Kreirame direktorium SI_2024_lab1_213036 za nashiot repozitorium
+
+stefa@Stefan MINGW64 ~/Documents (master)
+$ cd SI_2024_lab1_213036
+//Vleguvame vo nashiot repozitorium
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git init
+Initialized empty Git repository in C:/Users/stefa/Documents/SI_2024_lab1_213036/.git/
+//Inicijalizirame git repozitorium
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git remote add origin https://github.com/stojanovs/SI_2024_lab1_213036.git
+//Dodavame konekcja so lokalnoto i dalecno repo    
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ touch README.md
+//Kreirame txt dokument README.md
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ nano README.md
+//Vleguvame vo README.md za da izvrshime dodavanje/promena.
+
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git add README.md
+//Go dodavame README.md i sega e vo staging state
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 8018ecf] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+//Pravime commit na master grankata
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 247 bytes | 247.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/stojanovs/SI_2024_lab1_213036.git
+ * [new branch]      master -> master
+//Pravime commit od lokalniot repozitorium na oddalecenbiot repozitorium
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git add SILab1_1.java SILab1_2.java SILab1Main.java                           							     warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+//Gi dodavame trite fajlovi od linkovite od github
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git commit -m "Add starter code"
+[master 70440ea] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+//Pravime commit so poraka "Add starter code"
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git  push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 936 bytes | 936.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/stojanovs/SI_2024_lab1_213036.git
+   8018ecf..70440ea  master -> master
+//Pravime push na oddaleceniot repozitorium so nashiot lokalen repo.
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git checkout -b bug1
+Switched to a new branch 'bug1'
+//Kreirame nova granka od master grankata koja se vika bug1.
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git checkout -b bug2
+Switched to a new branch 'bug2'
+//Kreirame nova granka od master grankata koja se vika bug2.
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+//Se prefrluvame na grankata bug1.
+
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+//Dodavame fajlot SILab1_1.java/ i vo megjuvreme go popravame bugg-ot vo IntelliJ na metodot filterOddLenghtStrings
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug2 0c67619] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+//Pravime commit na promenite
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+//Se prefrluvame na grankata bug2 i go popravame uslovot na makeBigStringFrom
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git add SILab1_2.java -m"Fix wrong condition in makeBigStringFrom"
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 2ee8a7a] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+//Se vrakjame na bug1
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+M       SILab1Main.java
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git add SILab1Main.java
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 cca3b72] Call method makeBigStringFrom in main class
+ 1 file changed, 5 insertions(+)
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git push origin bug1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/stojanovs/SI_2024_lab1_213036/pull/new/bug1
+remote:
+To https://github.com/stojanovs/SI_2024_lab1_213036.git
+ * [new branch]      bug1 -> bug1
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git push origin bug2
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.02 KiB | 1.02 MiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/stojanovs/SI_2024_lab1_213036/pull/new/bug2
+remote:
+To https://github.com/stojanovs/SI_2024_lab1_213036.git
+ * [new branch]      bug2 -> bug2
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git merge bug1
+Already up to date.
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git push origin master
+Everything up-to-date
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git checkoutt bug2
+git: 'checkoutt' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git rebase master
+Current branch bug2 is up to date.
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git merge bug2
+Updating 70440ea..cca3b72
+Fast-forward
+ SILab1Main.java | 5 +++++
+ SILab1_1.java   | 4 ++--
+ SILab1_2.java   | 6 +++---
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/stojanovs/SI_2024_lab1_213036.git
+   70440ea..cca3b72  master -> master
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git push origin --all
+Everything up-to-date
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git add logs.txt 213036.txt
+fatal: pathspec 'logs.txt' did not match any files
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
+$ git log > logs.txt
+
+stefa@Stefan MINGW64 ~/Documents/SI_2024_lab1_213036 (master)
